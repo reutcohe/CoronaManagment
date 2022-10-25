@@ -1,0 +1,61 @@
+<p>add-patient works!</p>
+<form class="example-form" [formGroup]="addPatientForm">
+<mat-form-field appearance="fill">
+  <mat-label>full name</mat-label>
+  <input  type="text" formControlName="fullName" name="fullName" matInput>
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>id</mat-label>
+  <input  type="text" formControlName="id" name="id" matInput>
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>city</mat-label>
+  <input  type="text" formControlName="city" matInput>
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>street</mat-label>
+  <input  type="text" formControlName="street"  matInput>
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>num street</mat-label>
+  <input  type="text" formControlName="numStreet" matInput>
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>phone mobile</mat-label>
+  <input  type="text" formControlName="phoneMobile"  matInput>
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>phone</mat-label>
+  <input  type="text" formControlName="phone" matInput>
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Date of birth:</mat-label>
+  <input  type="date"  formControlName="DateOfBirth" matInput>
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>date of Positive:</mat-label>
+  <input  type="date" formControlName="dateOfPositive" matInput>
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>date of Negative:</mat-label>
+  <input  type="date"formControlName="dateOfNegative"  matInput>
+</mat-form-field>
+<br>
+<!-- <button mat-raised-button (click)="showV()" >vaccination+</button>
+<form class="example-form" *ngIf="ifNo4"> -->
+  <!-- <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>date of vaccination</mat-label>
+    <input  type="date" matInput  >
+  </mat-form-field>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>יצרן</mat-label>
+    <input  type="text" matInput  >
+  </mat-form-field>
+  <button mat-raised-button (click)="addVaccination()"  >add vaccination+</button> -->
+
+<!-- </form> -->
+
+
+<button mat-raised-button [disabled]="!addPatientForm.valid" (click)="addPtient()" >add</button>
+</form>
+  <button mat-raised-button color="warn" routerLinkActive="active" routerLink="/back">back</button>

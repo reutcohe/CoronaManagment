@@ -1,0 +1,47 @@
+<h2>List of patients</h2>
+<button mat-stroked-button color="accent" routerLinkActive="active" routerLink="/add"   >Add</button>
+<!--  (click)="routAdd()" -->
+
+
+<div *ngFor="let p of allPatients" >
+  <mat-list>
+    <mat-list-item> {{p.patientId}}    |     {{p.patientFullName}}</mat-list-item>
+    <!-- <mat-list-item></mat-list-item> -->
+    
+  </mat-list>
+  <button mat-button  color="warn" (click)="openDialog(p.patientId)">Update</button>
+  
+<button mat-button color="primary" >Dalate</button>
+<button mat-button color="accent" (click)="FullDetails(p.patientId)"  >More details</button>
+ <mat-divider></mat-divider>
+</div>
+<!-- <div *ngIf="patientOfUbdate">
+  {{patientOfUbdate}}
+</div> -->
+<!----->
+  
+<!-- <ol>
+  <li>
+    <mat-form-field appearance="fill">
+      <mat-label>What's your name?</mat-label>
+      <input matInput [(ngModel)]="patientOfUbdate">
+    </mat-form-field>
+  </li>
+  <li>
+    <button mat-raised-button (click)="openDialog()">Pick one</button>
+  </li>
+  <li *ngIf="patientOfUbdate">
+    You chose: <i>{{patientOfUbdate}}</i>
+  </li>
+</ol> -->
+  
+<!----->
+
+
+
+
+  
+  
+
+   
+
